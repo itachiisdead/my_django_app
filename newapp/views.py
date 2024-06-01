@@ -10,6 +10,6 @@ def index(request):
     return render(request, 'index.html', context)
 
 def about(request):
-    text= request.GET['texts']
+    text= request.POST['texts']
     num_of_words=len(text.split())
     return render(request, 'about.html', {'num_of_words': num_of_words})

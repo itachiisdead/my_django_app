@@ -57,8 +57,8 @@
     <h2>welcome {{name}}</h2><br>
     <h3>fill the form </h3>
 
-    <form method="" action="about">
-
+    <form method="POST" action="about">
+      {% csrf_token %}
       <textarea name="texts" cols="30" rows="10"></textarea>
 
       <div class="btn-container">
